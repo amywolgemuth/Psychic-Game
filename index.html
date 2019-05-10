@@ -7,63 +7,17 @@
         </title>
     </head>
     <body>
-        <script type="text/javascript">
-        
-    //declaring my variables
-        
-        var compGuess;
-        var wins = 0;
-        var losses = 0;
-        var guessesLeft = 0;
-        var guesses=[];
-        var letterArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-        
-        // testing array which works!!
-        // for (var i = 0; i < letterArr.length; i++){
-        //     console.log(letterArr[i])
-        // }
-        
-        var compGuess = letterArr[Math.floor(Math.random() * letterArr.length)];
-            alert("computer guess: " + compGuess);
-        
-    //FUNCTIONS
-
-    // When the user presses a key, it will run the following function...
-        
-    if (guessesLeft < 9) {
-        document.onkeyup = function(event) {
-                var userGuess = event.key.toLowerCase();
-            alert("user guess: " + userGuess);
-            guesses.push(userGuess);
-            }
-            if (userGuess === compGuess) {
-                wins++
-                alert("You Won!!!")
-                //how do I start the game over?
-                }
-            else {
-                guessesLeft = guessesLeft + 1;
-                alert("Guesses Left: " + guessesLeft);
-                }
-        }
-
-
-       
-        
-        
-        
-        </script>
         
         <H1>The Psychic Game</H1>
         <p>Guess what letter I'm thinking of ...</p>
 
-        <p>Wins: </p>
-        <p>Losses: </p>
-        <p>Guesses left: </p>
-        <p>Your guesses so far: </p>
+        <p>Wins: <span id="uWin"></span></p>
+        <p>Losses: <span id="uLoss"></span></p>
+        <p>Guesses left: <span id="gLeft"></span></p>
+        <p>Your guesses so far: <span id="uGuess"></span> </p>
       
+        <script src="assets/javascript/game.js"></script>
     
     </body>
    
-
 </html>
