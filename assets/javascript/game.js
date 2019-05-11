@@ -33,7 +33,8 @@ document.onkeyup = function(event) {
             document.getElementById("uLoss").innerHTML =losses;
             guessesLeft = 10;
             guesses = [];
-            alert("Sorry, you lost!!");            compGuess = letterArr[Math.floor(Math.random() * letterArr.length)];
+            alert("Sorry, you lost!!");
+            compGuess = letterArr[Math.floor(Math.random() * letterArr.length)];
             }
         }       
     }
