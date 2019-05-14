@@ -21,6 +21,8 @@ document.onkeyup = function(event) {
         document.getElementById("uWin").innerHTML =wins;
         guessesLeft = 10;
         guesses = [];
+        document.getElementById("uGuess").innerHTML =guesses;
+        document.getElementById("gLeft").innerHTML =guessesLeft;
         alert("You Won!!!");
         compGuess = letterArr[Math.floor(Math.random() * letterArr.length)];
         }
@@ -33,6 +35,8 @@ document.onkeyup = function(event) {
             document.getElementById("uLoss").innerHTML =losses;
             guessesLeft = 10;
             guesses = [];
+            document.getElementById("uGuess").innerHTML =guesses;
+            document.getElementById("gLeft").innerHTML =guessesLeft;
             alert("Sorry, you lost!!");
             compGuess = letterArr[Math.floor(Math.random() * letterArr.length)];
             }
